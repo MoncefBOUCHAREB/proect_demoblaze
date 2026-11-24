@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5175","Sign Up seccessfull","Sign Up","2026-11-24","passed","2026-11-24","","","",""
+"","12916","Connexion","Sign Up","2026-11-24","passed","2026-11-24","","","",""
+"","13068","Connexion","Sign Up","2026-11-24","passed","2026-11-24","","","",""
+"","3235","Sign Up seccessfull","Sign Up","2026-11-24","passed","2026-11-24","","","",""

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-24T14:50:43.072Z",
+    "end": "2026-11-24T14:50:57.769Z",
+    "duration": 14697,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cfd4663f-870d-46d4-9870-5548a5363d76",
+      "title": "",
+      "fullFile": "cypress\\e2e\\addprodect.cy.js",
+      "file": "cypress\\e2e\\addprodect.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0e006629-b372-44aa-9acc-ac0392ef38e9",
+          "title": "Sign Up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign Up seccessfull",
+              "fullTitle": "Sign Up Sign Up seccessfull",
+              "timedOut": null,
+              "duration": 3077,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept(\"POST\", \"**/signup\").as('signup');\ncy.on('window:alert', text => expect(text).to.contain('Sign up successful'));\n_Home.default.ButtonSignIn();\n_Home.default.PageSignUpp();\n_Home.default.SetUsername(username);\n_Home.default.SetPassword(\"Moncef\");\n_Home.default.CliqueSignUp();\ncy.wait(\"@signup\"); //temps d'attente fixe",
+              "err": {},
+              "uuid": "f2be4273-586a-4dbd-b4b0-2f5f0d0d9af3",
+              "parentUUID": "0e006629-b372-44aa-9acc-ac0392ef38e9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Connexion",
+              "fullTitle": "Sign Up Connexion",
+              "timedOut": null,
+              "duration": 6736,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_Home.default.CliqueLogin2();\n_Home.default.SetUsername2(username);\n_Home.default.SetPassword2(\"Moncef\");\n_Home.default.CliqueLoginIN();\n_Home.default.welcomeAff();\n_Home.default.CliquePhone();\n_Home.default.CliqueGalaxy();\ncy.url().should('include', '/prod.html?idp_=1');\n_Produit.default.GetProduitPhone();\n_Produit.default.CliqueAddtocart();\ncy.on('window:alert', text => expect(text).to.contain('Product added.'));\n_Produit.default.Cliquecart();\n_Cart.default.cliquePlaceorder();\n_Cart.default.Formulaire(username, \"France\", \"Paris\", \"12345678912345\", \"12\", \"2026\");\n_Cart.default.CliquePurchase();\n_Cart.default.Thankuu();",
+              "err": {},
+              "uuid": "29551d8b-83dd-44f5-b427-d433f16e855e",
+              "parentUUID": "0e006629-b372-44aa-9acc-ac0392ef38e9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f2be4273-586a-4dbd-b4b0-2f5f0d0d9af3",
+            "29551d8b-83dd-44f5-b427-d433f16e855e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9813,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

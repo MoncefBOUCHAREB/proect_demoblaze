@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-11-24T14:34:18.569Z",
+    "end": "2026-11-24T14:34:27.924Z",
+    "duration": 9355,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eea2b7cd-e74d-4343-ac6d-dc334968e783",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SignUp.cy.js",
+      "file": "cypress\\e2e\\SignUp.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27713d99-9199-4a7c-81e4-1be77e30efd1",
+          "title": "Sign Up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign Up seccessfull",
+              "fullTitle": "Sign Up Sign Up seccessfull",
+              "timedOut": null,
+              "duration": 523,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept(\"POST\", \"**/signup\").as('signup');\ncy.on('window:alert', text => expect(text).to.contain('Sign up successful'));\n_Home.default.ButtonSignIn();\n_Home.default.PageSignUpp();\n_Home.default.SetUsername(username);\n_Home.default.SetPassword(\"Moncef\");\n_Home.default.CliqueSignUp();\ncy.wait(\"@signup\"); //temps d'attente fixe",
+              "err": {
+                "message": "CypressError: `cy.task('reportAllureCypressSpecMessages')` failed with the following error:\n\nThe 'task' event has not been registered in the setupNodeEvents method. You must register it before using cy.task()\n\nFix this in your setupNodeEvents method here:\nC:\\Users\\monce\\Desktop\\proect_demoblaze\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('reportAllureCypressSpecMessages')` failed with the following error:\n\nThe 'task' event has not been registered in the setupNodeEvents method. You must register it before using cy.task()\n\nFix this in your setupNodeEvents method here:\nC:\\Users\\monce\\Desktop\\proect_demoblaze\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:147226:72)\n    at tryCatcher (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1776:23)\n    at Promise._settlePromiseFromHandler (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1488:31)\n    at Promise._settlePromise (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1545:18)\n    at Promise._settlePromise0 (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1590:10)\n    at Promise._settlePromises (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1666:18)\n    at _drainQueueStep (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2376:12)\n    at _drainQueue (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2369:9)\n    at Async._drainQueues (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2385:5)\n    at Async.drainQueues (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2255:14)\nFrom Your Spec Code:\n    at $Cy.eval (webpack://projet_cypress/./cypress/e2e/SignUp.cy.js:16:40)\n    at EventEmitter.emit (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:160010:19)\n    at parent.<computed> [as emit] (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:158923:31)\n    at $Cypress.action (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:42008:21)\n    at onAlert (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:157320:29)\n    at Object.success (https://www.demoblaze.com/js/index.js:251:11)\n    at i (https://www.demoblaze.com/node_modules/jquery/dist/jquery.min.js:2:28017)\n    at Object.fireWith [as resolveWith] (https://www.demoblaze.com/node_modules/jquery/dist/jquery.min.js:2:28783)",
+                "diff": null
+              },
+              "uuid": "4c002fd6-39eb-4979-8f1b-1b3e74098df8",
+              "parentUUID": "27713d99-9199-4a7c-81e4-1be77e30efd1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Connexion",
+              "fullTitle": "Sign Up Connexion",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_Home.default.CliqueLogin2();\n_Home.default.SetUsername2(username);\n_Home.default.SetPassword2(\"Moncef\");\n_Home.default.CliqueLoginIN();\n_Home.default.welcomeAff();\n_Home.default.CliquePhone();\n_Home.default.CliqueGalaxy();\ncy.url().should('include', '/prod.html?idp_=1');\n_Produit.default.GetProduitPhone();\n_Produit.default.CliqueAddtocart();\ncy.on('window:alert', text => expect(text).to.contain('Product added.'));\n_Produit.default.Cliquecart();\n_Cart.default.cliquePlaceorder();\n_Cart.default.SetName(username);\n_Cart.default.SetCountry(\"France\");\n_Cart.default.SetCity(\"Paris\");\n_Cart.default.SetCreditCard(\"12345678912345\");\n_Cart.default.SetMouth(\"12\");\n_Cart.default.SetYear(\"2026\");\n_Cart.default.CliquePurchase();\n_Cart.default.Thankuu();",
+              "err": {
+                "message": "CypressError: `cy.task('reportAllureCypressSpecMessages')` failed with the following error:\n\nThe 'task' event has not been registered in the setupNodeEvents method. You must register it before using cy.task()\n\nFix this in your setupNodeEvents method here:\nC:\\Users\\monce\\Desktop\\proect_demoblaze\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('reportAllureCypressSpecMessages')` failed with the following error:\n\nThe 'task' event has not been registered in the setupNodeEvents method. You must register it before using cy.task()\n\nFix this in your setupNodeEvents method here:\nC:\\Users\\monce\\Desktop\\proect_demoblaze\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at <unknown> (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:147226:72)\n    at tryCatcher (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1776:23)\n    at Promise._settlePromiseFromHandler (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1488:31)\n    at Promise._settlePromise (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1545:18)\n    at Promise._settlePromise0 (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1590:10)\n    at Promise._settlePromises (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1666:18)\n    at _drainQueueStep (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2376:12)\n    at _drainQueue (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2369:9)\n    at Async._drainQueues (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2385:5)\n    at Async.drainQueues (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:2255:14)\nFrom Your Spec Code:\n    at bt.flushAllureMessagesToTask (webpack://projet_cypress/./node_modules/allure-cypress/dist/cjs/index.js:1:23115)\n    at ht (webpack://projet_cypress/./node_modules/allure-cypress/dist/cjs/index.js:1:27275)\n    at Context.vn (webpack://projet_cypress/./node_modules/allure-cypress/dist/cjs/index.js:1:18213)",
+                "diff": null
+              },
+              "uuid": "34693026-bf92-4ed3-a0fa-3c732dd2eddb",
+              "parentUUID": "27713d99-9199-4a7c-81e4-1be77e30efd1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4c002fd6-39eb-4979-8f1b-1b3e74098df8",
+            "34693026-bf92-4ed3-a0fa-3c732dd2eddb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 523,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
